@@ -1,0 +1,24 @@
+swagger: "2.0"
+
+info:
+  title: "{{title}}"
+  version: "1.0"
+
+basePath: /v1.0
+
+paths:
+  /foo:
+    get:
+      operationId: empty.foo_get
+      parameters:
+        - name: message
+          description: Some message.
+          in: query
+          type: array
+          items:
+            type: string
+      responses:
+        200:
+          description: greeting response
+          schema:
+            type: string
